@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portiflio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="icon" href="l.png">
+</head>
+
+<body>
+    <header>
+        <div class="_head">
+            <h1><a href="index.html">portiflio</a></h1>
+            
+            <ul>
+                <li><a href="#_1">About</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="text">
+            <h1>Hi,im <span>Abdallah mohammed</span></h1>
+            <h3> programming developer</h3>
+            <div class="hero-line"></div>
+        </div>
+
+        <!-- Floating particles -->
+        <div class="particles">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <section>
+        <div class="_about"></div>
+        <di class="img reveal">
+            <img src="l.png">
+            <div class="my reveal" style="transition-delay:0.15s;">
+
+                <h2 id="_1" class="reveal">About Me</h2>
+            
+                <p class="reveal" style="transition-delay:0.2s;">
+                    I am Abdallah Mohamed, a Computer Science student at the Arab Open University (AOU), specializing in Cyber Security.
+            
+                    I am passionate about technology, networking, and software development. I enjoy learning new technologies and improving my programming and security skills through projects and continuous practice.
+            
+                    My goal is to become a professional Cyber Security Specialist with strong experience in networking, programming, and web technologies.
+                </p>
+            
+                <h2 class="reveal" style="transition-delay:0.1s;">Courses & Skills</h2>
+            
+                <ul>
+                    <li class="skill-item" style="--si:1">A+ Certification</li>
+                    <li class="skill-item" style="--si:2">Python Programming</li>
+                    <li class="skill-item" style="--si:3">Front-End Web Development (HTML, CSS, JavaScript)</li>
+                    <li class="skill-item" style="--si:4">CCNA Networking</li>
+                    <li class="skill-item" style="--si:5">Cyber Security Fundamentals</li>
+                </ul>
+            
+            </div>
+        </div>
+        
+
+        </div>
+        
+    </section>
+    
+    <div class="Certificat">
+        <h2 class="reveal"> My certificates</h2>
+        <div class="_img_">
+            <img src="ccna.jpg" class="_img_1" style="--ci:1">
+            <img src="tech.png" class="_img_2" style="--ci:2">
+
+        </div>
+    <footer>
+        <div class="contact" id="contact">
+
+            <h2 class="reveal">Contact Me</h2>
+        
+            <div class="social">
+        
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl" target="_blank" class="reveal" style="transition-delay:0.1s;">
+                    <img src="gmail.png" alt="">
+                    Email
+                </a>
+        
+                <a href="https://github.com/abdallah087" target="_blank" class="reveal" style="transition-delay:0.2s;">
+                    <img src="gitehub.jfif" alt="">
+                    GitHub
+                </a>
+        
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="reveal" style="transition-delay:0.3s;">
+                    <img src="in.png" alt="">
+                    LinkedIn
+                </a>
+        
+            </div>
+            <p class="copy">© 2026 portfolio. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal, .skill-item').forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal, .skill-item, ._img_ img, .Certificat h2').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
